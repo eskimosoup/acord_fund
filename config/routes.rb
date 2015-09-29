@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  get 'team_members/index'
-
   resources :articles, only: [:index, :show]
+  resources :contacts, only: [:new, :create]
   resources :downloads, only: :index
   resources :pages, only: :show
   resources :partners, only: :index
+  resources :team_members, only: :index
 
   mount Optimadmin::Engine => "/admin"
   root to: 'application#index'
