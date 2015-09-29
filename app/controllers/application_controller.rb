@@ -5,14 +5,14 @@ class ApplicationController < ActionController::Base
   before_action :global_site_settings, :load_objects
 
   def index
-    
+
   end
 
 
   private
 
     def load_objects
-      @partners = Partner.positioned
+      @presented_partners = BaseCollectionPresenter.new(collection: Partner.positioned, view_template: view_context, presenter: PartnerPresenter)
     end
 
     def global_site_settings
