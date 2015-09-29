@@ -1,0 +1,43 @@
+<%= render 'optimadmin/shared/header/main_title', title: 'Manage Leaderboards' %>
+
+<div class="main-content">
+  <div class="row module-header collapse">
+    <%= render 'optimadmin/shared/module/index/new_item', title: 'Leaderboard', object: Leaderboard, path: new_leaderboard_path %>
+    <%= render 'optimadmin/shared/search_form' %>
+    <%= render 'optimadmin/shared/module/index/pagination' %>
+    <!--
+      <%= render 'optimadmin/shared/module/index/order', options: [['Username', 'username']] %>
+    -->
+    <%= render 'optimadmin/shared/module/index/recycle_bin', items: @leaderboards.size, path: root_url %>
+  </div>
+
+  <div class="row collapse module-list-index header">
+
+
+
+
+
+      <%= list_item 'large-4 small-8' do %>
+        Title
+      <% end %>
+
+      <%= list_item 'large-3 small-8' do %>
+        Area
+      <% end %>
+
+
+
+    <%= list_item 'large-2 hide-for-medium-down' do 'Image' end %>
+
+
+    <%= list_item { 'Display' } %>
+    <%= list_item { 'Edit' } %>
+
+    <%= list_item 'large-1 hide-for-medium-down text-center last' do 'Delete' end %>
+  </div>
+
+  <!-- <div class='module-sortable' data-module="Leaderboard"> -->
+  <%= render partial: 'leaderboard', collection: @leaderboards, as: :leaderboard_presenter %>
+  <!-- </div> -->
+  <%= paginate @leaderboards %>
+</div>
