@@ -1,5 +1,5 @@
 Rails.application.configure do
-    config.logger = Logger.new(config.paths['log'].first, 3, 5242880)
+  config.logger = Logger.new(config.paths['log'].first, 3, 5242880)
 
   Rails.application.routes.default_url_options[:host] = 'www.ludo5.co.uk'
 

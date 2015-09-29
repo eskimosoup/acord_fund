@@ -6,6 +6,7 @@ RSpec.describe AdditionalContentPresenter, type: :presenter do
 
   describe "delegations", :delegation do
     it { should delegate_method(:title).to(:additional_content) }
+    it { should delegate_method(:video_url).to(:additional_content) }
   end
 
   describe "standard additional_content" do

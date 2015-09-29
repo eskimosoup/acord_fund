@@ -1,5 +1,5 @@
 Rails.application.configure do
-    Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+  Rails.application.routes.default_url_options[:host] = 'localhost:3000'
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
