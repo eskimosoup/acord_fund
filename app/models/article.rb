@@ -5,7 +5,7 @@ class Article < ActiveRecord::Base
   mount_uploader :image, ArticleUploader
 
   validates :title, :summary, :date, :content, presence: true
-  validates :suggested_url, allow_blank: true, uniqueness: { message: 'is already taken, leave blank to generate automatically' }
+  validates :suggested_url, allow_blank: true, uniqueness: { case_sensitive: false, message: 'is already taken, leave blank to generate automatically' }
 
   scope :displayed, -> { where("display = ? AND date <= ?", true, Date.today) }
   scope :ordered, -> { order(date: :desc) }
