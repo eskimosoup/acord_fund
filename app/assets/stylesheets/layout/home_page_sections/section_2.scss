@@ -1,0 +1,73 @@
+.home-page-section-2 {
+  background: $grey;
+  padding: em(80px) 0;
+
+  @include media('<tablet') {
+    padding: em(5px);
+  }
+
+  .row {
+    background: $white;
+    -webkit-box-shadow: 20px 9px 54px -12px rgba(0, 0, 0, .15);
+    -moz-box-shadow: 20px 9px 54px -12px rgba(0, 0, 0, .15);
+    box-shadow: 20px 9px 54px -12px rgba(0, 0, 0, .15);
+  }
+
+  .content {
+    padding: em(45px) em(55px);
+
+    @include media('<tablet') {
+      padding: em(20px);
+    }
+  }
+}
+
+.home-page-section-2-image-wrap {
+  position: relative;
+  height: 436px;
+
+  @include media('<tablet') {
+    width: 100%;
+  }
+
+  .section-image,
+  .section-overlay,
+  .section-title {
+    left: 0;
+    height: 436px;
+    position: absolute;
+    top: 0;
+    width: 388px;
+
+    @include media('<tablet') {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .section-overlay {
+    background: rgba($dark-blue, 0.25);
+    z-index: 1;
+  }
+
+  .section-title {
+    background: image-url('components/icons/right-arrow.png') no-repeat 107% 50%;
+    color: $white;
+    font-family: $montserrat;
+    font-size: em(30px);
+    font-weight: $montserrat-bold;
+    text-align: center;
+    padding: em(180px, 30px) em(50px, 30px) 0;
+    z-index: 2;
+
+    span {
+      color: $turquoise;
+    }
+
+    hr {
+      border-bottom-color: $turquoise;
+      border-bottom-width: 7px;
+      max-width: 63px;
+    }
+  }
+}

@@ -2,7 +2,7 @@ module Optimadmin
   class LeaderboardsController < Optimadmin::ApplicationController
     before_action :set_leaderboard, only: [:show, :edit, :update, :destroy]
 
-    edit_images_for Leaderboard, [[:image, { show: ['fit', 200, 200] }]]
+    edit_images_for Leaderboard, [[:image, { show: ['limit', 728, 90] }]]
 
     def index
       @leaderboards = Optimadmin::BaseCollectionPresenter.new(collection: Leaderboard.where('title ILIKE ?', "%#{params[:search]}%").order(area: :asc).page(params[:page]).per(params[:per_page] || 15), view_template: view_context, presenter: Optimadmin::LeaderboardPresenter)

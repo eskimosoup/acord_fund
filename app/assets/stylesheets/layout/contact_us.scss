@@ -1,0 +1,27 @@
+.contact-wrap {
+  background: $dark-blue;
+  padding: em(75px) 0;
+
+  @include media('<tablet') {
+    padding: em(5px) 0;
+  }
+
+  .content-wrap {
+    background: $white;
+    -webkit-box-shadow: 15px 24px 54px -12px rgba(0, 0, 0, .15);
+    -moz-box-shadow: 15px 24px 54px -12px rgba(0, 0, 0, .15);
+    box-shadow: 15px 24px 54px -12px rgba(0, 0, 0, .15);
+  }
+
+  .content {
+    padding: em(45px) em(55px);
+
+    @include media('<tablet') {
+      padding: em(20px);
+    }
+  }
+
+  h2 {
+    margin-bottom: em(63px, 30px);
+  }
+}

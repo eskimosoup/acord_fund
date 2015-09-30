@@ -1,0 +1,61 @@
+label {
+  display: block;
+  font-family: $montserrat;
+  font-weight: $montserrat-bold;
+  font-size: em(12px);
+  text-transform: uppercase;
+  margin: 0 0 em(5px, 12px);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="color"],
+input[type='search'],
+textarea {
+  border: 1px solid $grey;
+  font-family: $montserrat;
+
+  &:focus {
+    box-shadow: 0;
+    outline: 1px solid $light-blue;
+  }
+}
+
+@include media('>phone') {
+  textarea {
+    min-height: 158px;
+  }
+}
+
+input[type='submit'] {
+  background: $main-blue;
+  border: 0;
+  color: $white;
+  font-family: $montserrat;
+  font-size: em(13px);
+  display: inline-block;
+  padding: em(14px, 13px) em(35px, 13px);
+  text-transform: uppercase;
+
+  &:hover {
+    background: $dark-blue;
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:focus {
+    background: $dark-blue;
+    color: $white;
+  }
+}

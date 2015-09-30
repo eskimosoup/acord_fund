@@ -13,27 +13,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :forename %>
-    <%= f.text_field :forename %>
-  </div>
+  <div class="row">
+    <div class="medium-4 columns">
+      <div class="field">
+        <%= f.label :forename %>
+        <%= f.text_field :forename %>
+      </div>
 
-  <div class="field">
-    <%= f.label :surname %>
-    <%= f.text_field :surname %>
-  </div>
+      <div class="field">
+        <%= f.label :surname %>
+        <%= f.text_field :surname %>
+      </div>
 
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-  </div>
+      <div class="field">
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :message %>
-    <%= f.text_area :message %>
-  </div>
+    <div class="medium-8 columns">
+      <div class="field">
+        <%= f.label :message %>
+        <%= f.text_area :message %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit "Send", class: "button" %>
+      <div class="actions right">
+        <%= f.submit "Send", class: "button" %>
+      </div>
+    </div>
   </div>
 <% end %>

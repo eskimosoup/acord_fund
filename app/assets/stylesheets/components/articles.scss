@@ -1,0 +1,49 @@
+.article-aside-widget {
+  background: $dark-blue image-url('components/icons/articles.png') top right no-repeat;
+  padding: em(52px);
+  color: $white;
+
+  @include media('<tablet') {
+    padding: em(12px);
+    margin: em(20px) 0;
+  }
+
+  h3 {
+    color: $turquoise;
+    font-family: $montserrat;
+    font-size: em(17px);
+    font-weight: $montserrat-bold;
+    margin: 0 0 em(25px, 17px);
+    text-transform: uppercase;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+      color: $white;
+    }
+
+    &:hover {
+      color: $light-blue;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $turquoise;
+    }
+  }
+}
+
+.aside-widget-linked-article-title {
+  font-size: em(20px);
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.aside-widget-article-date {
+  font-family: $montserrat;
+  font-size: em(13px);
+}

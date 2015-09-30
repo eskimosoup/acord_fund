@@ -1,0 +1,42 @@
+.primary-navigation {
+  background: $main-blue;
+}
+
+.primary-navigation-links {
+  list-style: none;
+
+  li {
+    display: inline-block;
+    position: relative;
+
+    &.active:after {
+      background: image-url('components/icons/bottom-arrow.png') center no-repeat;
+      bottom: -19px;
+      content: ' ';
+      height: 19px;
+      position: absolute;
+      right: 0;
+      width: 100%;
+    }
+  }
+
+  a {
+    color: $white;
+    display: block;
+    font-size: em(16px);
+    padding: em(30px, 16px) em(15px, 16px);
+
+    &:link,
+    &:visited {
+      color: $white;
+    }
+
+    &:hover,
+    &:active,
+    &.active {
+      background: $white;
+      color: $dark-blue;
+      text-decoration: none;
+    }
+  }
+}

@@ -8,10 +8,10 @@ class AdditionalContent < ActiveRecord::Base
 
   scope :displayed, -> { where(display: true) }
 
-  AREAS = ['Home page - section 1 (with news widget)',
-           'Home page - section 2 (image left)',
-           'Home page - section 3 (video right)',
-           'Downloads introduction',
-           'Contact page details'
+  AREAS = [['Home page - section 1 (with news widget)', 'home_page_section_1'],
+           ['Home page - section 2 (image left)', 'home_page_section_2'],
+           ['Home page - section 3 (video right)', 'home_page_section_3'],
+           ['Downloads introduction', 'downloads_introduction'],
+           ['Contact us page details', 'contact_us']
           ]
 end

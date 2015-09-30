@@ -1,0 +1,38 @@
+<%= content_for :head do %>
+  <script>
+  $(function() {
+    $('.home-page-section-2 .columns').matchHeight({
+      byRow: true
+    });
+  });
+  </script>
+<% end %>
+<div class="home-page-section-2">
+  <div class="row collapse">
+    <div class="medium-4 columns">
+      <div class="home-page-section-2-image-wrap">
+
+        <div class="section-title">
+          <%= two_tone_comma_separated_title additional_content_presenter.title %>
+
+          <hr />
+        </div>
+
+        <div class="section-overlay">
+
+        </div>
+
+        <div class="section-image">
+          <%= additional_content_presenter.home_page_section_2_image %>
+        </div>
+      </div>
+    </div>
+
+    <div class="medium-8 columns">
+      <div class="content">
+        <%= additional_content_presenter.content %>
+        <%= additional_content_presenter.button %>
+      </div>
+    </div>
+  </div>
+</div>
