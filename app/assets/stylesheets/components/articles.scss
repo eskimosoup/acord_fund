@@ -3,6 +3,11 @@
   padding: em(52px);
   color: $white;
 
+  @include media('<tablet') {
+    padding: em(12px);
+    margin: em(20px) 0;
+  }
+
   h3 {
     color: $turquoise;
     font-family: $montserrat;

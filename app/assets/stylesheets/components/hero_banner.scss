@@ -4,6 +4,10 @@
   padding: em(115px) 0 em(80px);
   text-align: center;
 
+  @include media('<tablet') {
+    padding: em(50px) 0;
+  }
+
   h1,
   h2 {
     color: $white;
@@ -40,12 +44,25 @@
   list-style: none;
   margin: em(108px) 0 0;
 
+  @include media('<tablet') {
+    margin: em(30px) 0 0;
+  }
+
   li {
     position: relative;
 
     @include media('>phone') {
       display: inline-block;
       margin: 0 em(30px);
+    }
+
+    @include media('<tablet') {
+      display: block;
+      margin: em(30px) 0;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
 
     &:hover:after {
@@ -66,6 +83,10 @@
     display: block;
     padding: em(25px) em(40px);
     text-transform: uppercase;
+
+    @include media('<tablet') {
+      padding: em(15px) em(20px);
+    }
 
     &:link,
     &:visited {

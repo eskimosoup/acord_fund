@@ -1,5 +1,9 @@
 .team-member {
   border-right: 6px solid $turquoise;
+
+  @include media('<tablet') {
+    margin: 0 0 em(5px);
+  }
 }
 
 .team-member-name {

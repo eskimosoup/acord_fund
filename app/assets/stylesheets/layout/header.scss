@@ -1,12 +1,21 @@
 .top-header {
   @extend %clearfix;
-  padding: em(26px) em(40px);
+
+  @include media('>phone') {
+    padding: em(26px) em(40px);
+  }
+
+  @include media('<tablet') {
+    padding: em(10px);
+  }
 }
 
-.logo,
-.contact-details {
-  float: left;
-  width: 50%;
+@include media('>phone') {
+  .logo,
+  .contact-details {
+    float: left;
+    width: 50%;
+  }
 }
 
 .logo {
@@ -20,7 +29,15 @@
     font-size: em(18px);
     font-weight: $lato-medium;
     line-height: 1;
-    margin: 0 em(50px);
+
+    @include media('>phone') {
+      margin: 0 em(50px);
+    }
+
+    @include media('<tablet') {
+      font-size: em(14px);
+      margin: 0;
+    }
   }
 }
 
@@ -40,6 +57,10 @@
   line-height: 1;
   text-align: right;
   margin: em(8px, 16px) 0 0;
+
+  @include media('<tablet') {
+    line-height: 1.5;
+  }
 
   strong,
   a {
