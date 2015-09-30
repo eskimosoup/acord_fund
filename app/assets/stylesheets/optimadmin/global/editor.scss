@@ -1,6 +1,68 @@
 @import 'optimadmin/lib/mixins', '../../lib/variables';
 @import 'optimadmin/global/additional_reset';
 
+html,
+body {
+  font-size: 14px;
+}
+
+body {
+  color: $dark-grey;
+  font-family: $lato;
+}
+
+a {
+  color: $main-blue;
+  font-weight: $lato-semibold;
+  text-decoration: none;
+
+  &:link {
+    color: $main-blue;
+  }
+
+  &:visited {
+    color: $main-blue;
+  }
+
+  &:hover {
+    color: $light-blue;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $dark-blue;
+  }
+}
+
+p {
+  font-size: em(14px);
+  line-height: 2.14;
+  margin: em(25px) 0;
+}
+
+
+h2 {
+  color: $main-blue;
+  font-family: $montserrat;
+  font-size: em(30px);
+  font-weight: $montserrat-bold;
+
+  span {
+    color: $turquoise;
+  }
+}
+
+h3 {
+  color: $main-blue;
+  font-family: $montserrat;
+  font-size: em(27px);
+  font-weight: $montserrat-bold;
+
+  span {
+    color: $turquoise;
+  }
+}
+
 .image-left {
   float: left;
   margin: em(16px) em(16px) em(16px) 0;

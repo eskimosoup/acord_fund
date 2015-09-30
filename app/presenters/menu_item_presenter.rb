@@ -20,6 +20,12 @@ class MenuItemPresenter < BasePresenter
     classes.join(' ')
   end
 
+  def li_classes
+    classes = ["menu-link-container"]
+    classes << "active" if active?
+    classes.join(' ')
+  end
+
   private
 
   def active?

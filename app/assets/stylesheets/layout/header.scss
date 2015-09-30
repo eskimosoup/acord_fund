@@ -1,0 +1,49 @@
+.top-header {
+  @extend %clearfix;
+  padding: em(26px) em(40px);
+}
+
+.logo,
+.contact-details {
+  float: left;
+  width: 50%;
+}
+
+.logo {
+  a,
+  p {
+    display: inline-block;
+  }
+
+  p {
+    color: $dark-blue;
+    font-size: em(18px);
+    font-weight: $lato-medium;
+    line-height: 1;
+    margin: 0 em(50px);
+  }
+}
+
+.advice-title {
+  color: $main-blue;
+  display: block;
+  font-size: em(18px);
+  font-weight: $lato-black;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.advice-details {
+  color: $light-blue;
+  font-size: em(16px);
+  font-weight: $lato-semibold;
+  line-height: 1;
+  text-align: right;
+  margin: em(8px, 16px) 0 0;
+
+  strong,
+  a {
+    color: $dark-blue;
+    font-weight: $lato-heavy;
+  }
+}

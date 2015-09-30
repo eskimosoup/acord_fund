@@ -1,0 +1,23 @@
+.content-button {
+  background: $main-blue;
+  color: $white;
+  display: inline-block;
+  padding: em(7px) em(14px);
+  text-transform: uppercase;
+
+  &:link,
+  &:visited {
+    color: $white;
+  }
+
+  &:hover {
+    background: $dark-blue;
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:active {
+    background: $dark-blue;
+    color: $white;
+  }
+}

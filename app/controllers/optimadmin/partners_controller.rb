@@ -2,7 +2,7 @@ module Optimadmin
   class PartnersController < Optimadmin::ApplicationController
     before_action :set_partner, only: [:show, :edit, :update, :destroy]
 
-    edit_images_for Partner, [[:image, { show: ['fit', 200, 200], small: ['fit', 200, 200] }]]
+    edit_images_for Partner, [[:image, { show: ['fit', 200, 200], small: ['fill', 210, 80] }]]
 
     def index
       @partners = Optimadmin::BaseCollectionPresenter.new(collection: Partner.where('name ILIKE ?', "%#{params[:search]}%").order(:position).page(params[:page]).per(params[:per_page] || 15), view_template: view_context, presenter: Optimadmin::PartnerPresenter)

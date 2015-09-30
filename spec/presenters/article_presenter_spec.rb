@@ -9,6 +9,10 @@ RSpec.describe ArticlePresenter, type: :presenter do
   end
 
   describe "standard article" do
+    it "returns the linked title" do
+      expect(article_presenter.linked_title).to eq(link_to article.title, article, title: article.title)
+    end
+
     it "returns the summary - html formatted" do
       expect(article_presenter.content).to eq(simple_format article.summary)
     end

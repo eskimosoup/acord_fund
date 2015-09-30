@@ -1,0 +1,15 @@
+<div class="article-aside-widget">
+  <h3>News</h3>
+
+  <div class="aside-widget-linked-article-title">
+    <%= @presented_article.linked_title %>
+  </div>
+
+  <%= @presented_article.summary %>
+
+  <span class="aside-widget-article-date">
+    <%= @presented_article.date(:medium) %>
+  </span>
+
+  <%= image_tag 'components/icons/read-more.png', alt: @presented_article.title, class: 'right' %>
+</div>

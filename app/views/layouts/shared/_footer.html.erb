@@ -1,5 +1,12 @@
 <footer>
-  <%= render partial: 'partners/partners_footer', collection: @presented_partners, as: :partner_presenter %>
+  <div id="map-canvas"></div>
+  <div id="address" class="hide"><%= global_site_settings['Address'] %></div>
+
+  <ul class="footer-partners text-center">
+    <%= render partial: 'partners/partners_footer', collection: @presented_partners, as: :partner_presenter %>
+  </ul>
 </footer>
 
 <%= yield :footer %>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3qZIfORljW3kRW0GfPeaRecM77Cp0zio&signed_in=true&callback=initMap" async defer></script>

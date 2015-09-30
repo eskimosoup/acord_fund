@@ -1,0 +1,82 @@
+.home-hero-banner {
+  background: image-url('layout/header/bg.png') no-repeat top center;
+  max-height: 642px;
+  padding: em(115px) 0 em(80px);
+  text-align: center;
+
+  h1,
+  h2 {
+    color: $white;
+    margin: 0;
+  }
+
+  h1 {
+    font-family: $merriweather;
+    font-weight: $merriweather-light;
+    font-size: em(41px);
+    margin: em(18px, 41px) 0 em(44px, 41px);
+
+    strong {
+      font-weight: $merriweather-bold;
+    }
+  }
+
+  h2 {
+    font-family: $montserrat;
+    font-size: em(30px);
+    font-weight: $montserrat-light;
+    text-transform: uppercase;
+    margin: 0 0 em(18px, 41px);
+  }
+
+  hr {
+    border-color: $white;
+    border-bottom-width: 5px;
+    max-width: 69px;
+  }
+}
+
+.home-hero-banner-links {
+  list-style: none;
+  margin: em(108px) 0 0;
+
+  li {
+    position: relative;
+
+    @include media('>phone') {
+      display: inline-block;
+      margin: 0 em(30px);
+    }
+
+    &:hover:after {
+      background: image-url('components/icons/bottom-arrow.png') center no-repeat;
+      bottom: -19px;
+      content: ' ';
+      height: 19px;
+      position: absolute;
+      right: 0;
+      width: 100%;
+    }
+  }
+
+  a {
+    background: $dark-blue;
+    border: 1px solid $white;
+    color: $white;
+    display: block;
+    padding: em(25px) em(40px);
+    text-transform: uppercase;
+
+    &:link,
+    &:visited {
+      color: $white;
+    }
+
+    &:hover,
+    &:active {
+      background: $white;
+      color: $dark-blue;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.team-member {
+  border-right: 6px solid $turquoise;
+}
+
+.team-member-name {
+  color: $main-blue;
+  font-family: $montserrat;
+  font-size: em(18px);
+  font-weight: $montserrat-bold;
+}
+
+.team-member-role {
+  color: $alternative-dark-grey;
+  font-family: $montserrat;
+  font-size: em(12px);
+}
