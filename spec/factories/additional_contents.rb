@@ -3,7 +3,7 @@ FactoryGirl.define do
     area "MyString"
     title "MyString"
     content "<p>MyText</p>"
-    video_url "MyString"
+    video_url "https://www.youtube.com/watch?v=mSsyg1MaTuQ"
     trait :with_image do
       image { File.open(File.join(Rails.root, "spec/support/images/landscape_image.jpg")) }
     end

@@ -69,6 +69,7 @@ end
 
 
 source 'https://rails-assets.org' do
+  gem 'rails-assets-colorbox'
   gem 'rails-assets-matchHeight'
 end
 

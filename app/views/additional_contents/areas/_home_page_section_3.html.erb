@@ -13,7 +13,7 @@
       <div class="content">
         <h2><%= two_tone_title additional_content_presenter.title %></h2>
         <%= additional_content_presenter.content %>
-        <%= additional_content_presenter.button %>
+        <%= additional_content_presenter.button('colorbox-youtube') %>
       </div>
     </div>
 
@@ -21,7 +21,7 @@
       <div class="home-page-section-3-image-wrap">
 
         <div class="section-title">
-          <%= link_to (image_tag 'components/icons/play-icon.png', alt: additional_content_presenter.title), additional_content_presenter.video_url %>
+          <%= link_to (image_tag 'components/icons/play-icon.png', alt: additional_content_presenter.title), additional_content_presenter.youtube_link, class: 'colorbox-youtube' %>
         </div>
 
         <div class="section-overlay">
