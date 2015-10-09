@@ -1,3 +1,27 @@
-<%= @presented_page.title %>
+<div class="internal-content">
+  <%= render 'shared/title_area', title: @presented_page.title %>
 
-<%= @presented_page.content %>
+  <div class="row">
+    <div class="medium-8 <%= 'medium-centered' if @presented_page.file_download.blank? || if @presented_page.show_image.blank? %> columns">
+      <div class="content-box">
+        <%= @presented_page.content %>
+      </div>
+    </div>
+
+    <% if @presented_page.file_download.present? || if @presented_page.show_image.present? %>
+      <div class="medium-4 columns">
+        <% if @presented_page.file_download.present? %>
+          <div class="aside-content-box download-box">
+            <%= @presented_page.file_download %>
+          </div>
+        <% end %>
+
+        <% if @presented_page.show_image.present? %>
+          <div class="aside-content-box">
+            <%= @presented_page.show_image %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

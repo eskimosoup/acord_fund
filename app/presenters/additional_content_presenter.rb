@@ -1,9 +1,13 @@
 class AdditionalContentPresenter < BasePresenter
   presents :additional_content
-  delegate :title, :area, :video_url, to: :additional_content
+  delegate :area, :video_url, to: :additional_content
+
+  def title
+    additional_content.title if additional_content.present? && additional_content.title.present?    
+  end
 
   def content
-    h.raw additional_content.content
+    h.raw additional_content.content if additional_content.present? && additional_content.content.present?
   end
 
   def button(classes = '')

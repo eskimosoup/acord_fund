@@ -1,5 +1,6 @@
 module ApplicationHelper
   def two_tone_title(title)
+    return if title.blank?
     size = title.scan(/[\w-]+/).size
 
     if size > 1

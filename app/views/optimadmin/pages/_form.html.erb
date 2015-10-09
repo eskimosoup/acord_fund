@@ -39,6 +39,14 @@
 
   <%= field_set_tag nil, id: 'tabs-2' do %>
     <%= f.image_field :image %>
+
+    <%= f.document_field :file %>
+
+    <div class="field">
+      <%= f.label :file_download_text %> <%= module_tooltip('Download text prompt', 'Please enter something such as "Download file"') %><br />
+      <%= f.text_field :file_download_text %>
+    </div>
+
   <% end %>
 
   <%= field_set_tag nil, id: 'tabs-3' do %>

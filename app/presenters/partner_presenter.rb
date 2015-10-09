@@ -10,6 +10,11 @@ class PartnerPresenter < BasePresenter
     h.raw partner.content
   end
 
+  def website
+    return nil unless partner.website.present?
+    h.link_to partner.website, partner.website, target: '_blank'
+  end
+
   def show
     if partner.website.present?
       h.link_to show_image_with_title, partner.website, title: name, target: '_blank'

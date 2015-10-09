@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :downloads, only: :index
   resources :pages, only: :show
   resources :partners, only: :index
-  resources :team_members, only: :index
+  resources :team_members, only: :index, path: 'team-members'
 
   mount Optimadmin::Engine => "/admin"
   root to: 'application#index'

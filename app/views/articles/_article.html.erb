@@ -1,2 +1,21 @@
-<%= article_presenter.title %>
-<%= article_presenter.summary %>
+<div class="article">
+  <div class="row">
+    <div class="medium-4 large-3 columns">
+      <%= article_presenter.linked_index_image %>
+    </div>
+
+    <div class="medium-8 large-9 columns">
+      <div class="article-title">
+        <%= article_presenter.linked_title %>
+      </div>
+
+      <div class="article-date"><%= article_presenter.date(:medium) %></div>
+
+      <%= article_presenter.summary %>
+
+      <div class="read-more">
+        <%= article_presenter.linked_title('Read more') %>
+      </div>
+    </div>
+  </div>
+</div>

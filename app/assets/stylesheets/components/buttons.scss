@@ -21,3 +21,23 @@
     color: $white;
   }
 }
+
+.read-more a,
+.inline-button {
+  color: $white;
+  display: inline-block;
+  background: $main-blue;
+  padding: em(7px) em(14px);
+
+  &:link,
+  &:visited,
+  &:active {
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $offset-main-blue;
+    text-decoration: none;
+  }
+}

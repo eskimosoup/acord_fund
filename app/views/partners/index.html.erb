@@ -1,3 +1,13 @@
-<h1>Partners#index</h1>
-<p>Find me in app/views/partners/index.html.erb</p>
-<%= render partial: 'partners', collection: @partners, as: :partner_presenter %>
+<div class="internal-content">
+  <%= render 'shared/title_area', title: @presented_additional_content.title %>
+
+  <div class="row">
+    <div class="medium-12 large-8 large-centered columns">
+      <div class="content-box">
+        <%= @presented_additional_content.content %>
+
+        <%= render partial: 'partner', collection: @presented_partners, as: :partner_presenter %>
+      </div>
+    </div>
+  </div>
+</div>

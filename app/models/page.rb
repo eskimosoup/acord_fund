@@ -3,13 +3,15 @@ class Page < ActiveRecord::Base
   friendly_id :slug_candidates, use: [:slugged, :history]
 
   mount_uploader :image, PageUploader
+  mount_uploader :file, Optimadmin::DocumentUploader
 
   before_save :store_image, if: Proc.new{|page| page.remote_image_url.blank? }
-  # before_save :store_file, if: Proc.new{|page| page.remote_file_url.blank? }
+  before_save :store_file, if: Proc.new{|page| page.remote_file_url.blank? }
 
   scope :displayed, -> { where(display: true) }
 
   validates :title, :content, presence: true
+  validates :file_download_text, presence: true, if: "file.present?"
   validates :suggested_url, allow_blank: true, uniqueness: { case_sensitive: false, message: 'is already taken, leave blank to generate automatically' }
 
   def slug_candidates
@@ -40,7 +42,7 @@ class Page < ActiveRecord::Base
     Optimadmin::Image.store_image(self, image) if image.present? && image_changed?
   end
 
-  # def store_file
-  #   Optimadmin::Document.store_file(self, file) if file.present? && file_changed?
-  # end
+  def store_file
+    Optimadmin::Document.store_file(self, file) if file.present? && file_changed?
+  end
 end

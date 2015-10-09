@@ -1,3 +1,17 @@
-<h1>Downloads#index</h1>
-<p>Find me in app/views/downloads/index.html.erb</p>
-<%= render partial: 'download', collection: @downloads, as: :download_presenter %>
+<div class="internal-content">
+  <%= render 'shared/title_area', title: @presented_downloads_text.title %>
+
+  <div class="row">
+    <div class="medium-12 columns">
+      <div class="content-box">
+        <%= @presented_downloads_text.content %>
+
+        <div class="row">
+          <div class="medium-10 columns">
+            <%= render partial: 'download', collection: @presented_downloads, as: :download_presenter %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

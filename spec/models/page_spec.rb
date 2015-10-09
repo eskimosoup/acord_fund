@@ -7,6 +7,10 @@ RSpec.describe Page, type: :model do
     it { should validate_presence_of(:content) }
     it { should validate_uniqueness_of(:suggested_url).allow_blank.case_insensitive.with_message("is already taken, leave blank to generate automatically") }
   end
+  describe "validations", :validation do
+    subject(:page) { build(:page_with_file) }
+    it { should validate_presence_of(:file_download_text) }
+  end
 
   describe "scopes", :scope do
     let(:page) { create(:page) }

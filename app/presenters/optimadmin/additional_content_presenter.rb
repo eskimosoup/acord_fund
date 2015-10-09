@@ -4,7 +4,7 @@ module Optimadmin
     delegate :id, :title, to: :additional_content
 
     def area
-      additional_content.area.humanize
+      AdditionalContent::AREAS.select{|x| x[1] == additional_content.area}[0][0]
     end
 
 

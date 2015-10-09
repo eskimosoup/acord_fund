@@ -1,7 +1,8 @@
 class ContactsController < ApplicationController
 
+  before_action :load_contact_content
+
   def new
-    @contact = Contact.new
   end
 
   def create
@@ -16,7 +17,12 @@ class ContactsController < ApplicationController
 
   private
 
-  def contact_params
-    params.require(:contact).permit(:forename, :surname, :email, :message)
-  end
+    def contact_params
+      params.require(:contact).permit(:forename, :surname, :email, :message)
+    end
+
+    def load_contact_content
+      @presented_contact_sections = BaseCollectionPresenter.new(collection: AdditionalContent.displayed.where("area LIKE ?", "contact_us_%").where.not(area: 'contact_us_other_contact_details').order(area: :desc), view_template: view_context, presenter: AdditionalContentPresenter)
+      @presented_other_contact_details = AdditionalContentPresenter.new(object: AdditionalContent.displayed.find_by(area: 'contact_us_other_contact_details'), view_template: view_context)
+    end
 end

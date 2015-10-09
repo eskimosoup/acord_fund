@@ -5,7 +5,7 @@ module Optimadmin
     edit_images_for AdditionalContent, [[:image, { home_page_section_2: ['limit', 491, 551], home_page_section_3: ['limit', 388, 345] }]]
 
     def index
-      @additional_contents = Optimadmin::BaseCollectionPresenter.new(collection: AdditionalContent.where('title ILIKE ?', "%#{params[:search]}%").page(params[:page]).per(params[:per_page] || 15), view_template: view_context, presenter: Optimadmin::AdditionalContentPresenter)
+      @additional_contents = Optimadmin::BaseCollectionPresenter.new(collection: AdditionalContent.where('title ILIKE ?', "%#{params[:search]}%").order(:area).page(params[:page]).per(params[:per_page] || 15), view_template: view_context, presenter: Optimadmin::AdditionalContentPresenter)
     end
 
     def show

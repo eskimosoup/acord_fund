@@ -2,7 +2,9 @@ $light-blue: #79a9b7;
 $offset-main-blue: #457cbe;
 $main-blue: #0062b0;
 $dark-blue: #354069;
+$alternative-blue: #39628d;
 $white: #fff;
+$offset-white: #f5f5f5;
 $dark-grey: #333333;
 $alternative-dark-grey: #201f1f;
 $black: #1a1a1a;
@@ -10,7 +12,7 @@ $light-grey: #e4e4e4;
 $grey: #dedede;
 $turquoise: #bfdede;
 
-$montserrat: 'montserrat';
+$montserrat: 'montserrat', Helvetica, Arial, sans-serif;
 $montserrat-light: 300;
 $montserrat-bold: 700;
 
@@ -21,6 +23,9 @@ $lato-semibold: 600;
 $lato-heavy: 800;
 $lato-black: 900;
 
-$merriweather: 'merriweather';
+$merriweather: 'merriweather', Helvetica, Arial, sans-serif;
 $merriweather-light: 300;
 $merriweather-bold: 700;
+
+$myriad-pro: 'myriad-pro', 'Myriad Pro', Helvetica, Arial, sans-serif;
+$myriad-pro-bold: 700;

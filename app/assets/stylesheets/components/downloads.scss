@@ -1,0 +1,16 @@
+.download {
+  margin: em(10px) 0;
+
+  a {
+    color: $white;
+    display: block;
+    background: $main-blue image-url('components/internal/download-icon-blue.png') no-repeat 95% 50%;
+    padding: em(14px) em(32px) em(14px) em(14px);
+
+
+    &:hover {
+      background-color: $offset-main-blue;
+      text-decoration: none;
+    }
+  }
+}
