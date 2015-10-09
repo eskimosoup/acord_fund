@@ -41,6 +41,12 @@ RSpec.describe ArticlePresenter, type: :presenter do
       it "show_image should return nil" do
         expect(article_presenter.show_image).to eq(nil)
       end
+      it "index_image should return nil" do
+        expect(article_presenter.index_image).to eq(nil)
+      end
+      it "linked index_image should return nil" do
+        expect(article_presenter.linked_index_image).to eq(nil)
+      end
     end
 
     describe "has image" do
@@ -49,6 +55,14 @@ RSpec.describe ArticlePresenter, type: :presenter do
 
       it "show_image should not return nil" do
         expect(article_presenter.show_image(alt: article.title)).to eq(image_tag(article.image.show, alt: article.title))
+      end
+
+      it "index image should not return nil" do
+        expect(article_presenter.index_image(alt: article.title)).to eq(image_tag(article.image.index, alt: article.title))
+      end
+
+      it "linked index image should not return nil" do
+        expect(article_presenter.linked_index_image).to eq(link_to image_tag(article.image.index, alt: article.title), article, title: article.title)
       end
     end
   end

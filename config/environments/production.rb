@@ -5,7 +5,7 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :sendmail
   config.action_mailer.sendmail_settings = {
-    location: '/usr/lib/sendmail'
+    location: '/usr/lib/sendmail',
     arguments: '-i'
   }
 

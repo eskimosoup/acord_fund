@@ -13,8 +13,7 @@ body {
 
 a {
   color: $main-blue;
-  font-weight: $lato-semibold;
-  text-decoration: none;
+  text-decoration: underline;
 
   &:link {
     color: $main-blue;
@@ -35,11 +34,23 @@ a {
 }
 
 p {
+  font-family: $myriad-pro;
   font-size: em(14px);
-  line-height: 2.14;
-  margin: em(25px) 0;
+  line-height: 1.6;
+  margin: em(12px) 0;
 }
 
+
+h1 {
+  color: $dark-blue;
+  font-family: $montserrat;
+  font-size: em(32px);
+  font-weight: $montserrat-bold;
+
+  span {
+    color: $main-blue;
+  }
+}
 
 h2 {
   color: $main-blue;
@@ -71,4 +82,11 @@ h3 {
 .image-right {
   float: right;
   margin: em(16px) 0 em(16px) em(16px);
+}
+
+.small-inline-title {
+  border-bottom: 1px dotted $main-blue;
+  font-weight: $myriad-pro-bold;
+  font-size: em(16px);
+  color: $dark-blue;
 }

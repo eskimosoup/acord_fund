@@ -1,17 +1,29 @@
 .footer-partners {
   list-style: none;
-  margin: em(60px) 0;
+  padding: em(60px) 0;
 
   @include media('<tablet') {
-    margin: em(15px) 0;
+    padding: em(15px) 0;
   }
 
   li {
     display: inline-block;
-    margin: 0 em(25px);
+    padding: 0 em(25px);
 
     @include media('<tablet') {
-      margin: em(5px);
+      padding: em(5px);
+    }
+  }
+}
+
+.partner {
+  margin: em(40px) 0;
+
+  .medium-4 {
+    border-right: 3px solid $light-blue;
+
+    img {
+      padding: em(20px);
     }
   }
 }

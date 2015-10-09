@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929132658) do
+ActiveRecord::Schema.define(version: 20151009095413) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -158,16 +158,18 @@ ActiveRecord::Schema.define(version: 20150929132658) do
   end
 
   create_table "pages", force: :cascade do |t|
-    t.string   "title",                        null: false
+    t.string   "title",                             null: false
     t.string   "slug"
     t.string   "suggested_url"
     t.string   "image"
-    t.string   "style",                        null: false
-    t.string   "layout",                       null: false
-    t.boolean  "display",       default: true
-    t.text     "content",                      null: false
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.string   "style",                             null: false
+    t.string   "layout",                            null: false
+    t.boolean  "display",            default: true
+    t.text     "content",                           null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.string   "file"
+    t.string   "file_download_text"
   end
 
   create_table "partners", force: :cascade do |t|

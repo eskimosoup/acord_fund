@@ -23,6 +23,10 @@ RSpec.describe PartnerPresenter, type: :presenter do
       it "partner website should just image" do
         expect(partner_presenter.show).to eq(partner_presenter.show_image(alt: partner.name))
       end
+
+      it "no partner link" do
+        expect(partner_presenter.website).to eq(nil)
+      end
     end
 
     describe "has website" do
@@ -31,6 +35,10 @@ RSpec.describe PartnerPresenter, type: :presenter do
 
       it "partner website should image with website link" do
         expect(partner_presenter.show).to eq(link_to (partner_presenter.show_image(alt: partner.name)), partner.website, title: partner.name, target: '_blank')
+      end
+
+      it "returns partner link" do
+        expect(partner_presenter.website).to eq(link_to partner.website, partner.website, target: '_blank')
       end
     end
   end

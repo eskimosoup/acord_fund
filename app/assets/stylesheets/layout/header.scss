@@ -1,5 +1,6 @@
 .top-header {
   @extend %clearfix;
+  background: $white;
 
   @include media('>phone') {
     padding: em(26px) em(40px);
