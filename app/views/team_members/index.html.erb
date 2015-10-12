@@ -1,3 +1,12 @@
+<%= content_for :head do %>
+  <script>
+  $(function() {
+    $('.team-member').matchHeight({
+      byRow: true
+    });
+  });
+  </script>
+<% end %>
 <div class="internal-content">
   <%= render 'shared/title_area', title: @presented_additional_content.title %>
 
