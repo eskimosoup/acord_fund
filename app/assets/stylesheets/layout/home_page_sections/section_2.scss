@@ -27,6 +27,7 @@
   height: 436px;
 
   @include media('<tablet') {
+    background: $white;
     width: 100%;
   }
 
@@ -45,9 +46,11 @@
     }
   }
 
-  .section-overlay {
-    background: rgba($dark-blue, 0.25);
-    z-index: 1;
+  @include media('>tablet') {
+    .section-overlay {
+      background: rgba($dark-blue, 0.25);
+      z-index: 1;
+    }
   }
 
   .section-title {

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  %w( 403 404 422 500 ).each do |code|
+    get code, to: 'errors#show', code: code
+  end
+
   resources :articles, only: [:index, :show]
   resources :contacts, only: [:new, :create]
   resources :downloads, only: :index

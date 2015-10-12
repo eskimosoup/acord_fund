@@ -8,6 +8,12 @@
   </div>
 
   <div class="contact-details">
+    <div class="text-right show-for-small">
+      <%= link_to '#', class: 'toggle-class menu-toggle', title: 'Show navigation', data: { container: '.primary-navigation', class: 'hide-for-small' } do %>
+        <%= image_tag 'components/icons/hamburger.png', alt: 'Show navigation' %>
+      <% end %>
+    </div>
+
     <strong class="advice-title">Need help or advice?</strong>
 
     <p class="advice-details">
@@ -17,7 +23,7 @@
   </div>
 </header>
 
-<nav class="primary-navigation">
+<nav class="primary-navigation hide-for-small">
   <div class="row">
     <div class="small-12 columns">
       <ul class="primary-navigation-links">

@@ -14,9 +14,9 @@
 //= require jquery_ujs
 //= require_tree ./vendor/foundation/libraries
 //= require vendor/foundation/foundation.js
-//= requrie vendor/foundation/foundation.equalizer.js
 //= require matchHeight
 //= require colorbox
+//= require components/toggle_class
 //= require components/google_maps
 $(function() {
   if (Modernizr.mq('only screen and (min-width: 768px)')) {

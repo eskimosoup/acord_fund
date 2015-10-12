@@ -11,6 +11,29 @@
   }
 }
 
+.menu-toggle {
+  @include media('>=321px') {
+    display: inline-block;
+  }
+  @include media('<321px') {
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+  background: $main-blue;
+  color: $white;
+  padding: em(15px);
+  margin: 0 0 em(15px);
+  text-transform: uppercase;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: $white;
+  }
+}
+
 @include media('>phone') {
   .logo,
   .contact-details {
@@ -49,6 +72,10 @@
   font-weight: $lato-black;
   text-align: right;
   text-transform: uppercase;
+
+  @include media('<tablet') {
+    font-size: em(14px, 18px);
+  }
 }
 
 .advice-details {
@@ -60,6 +87,7 @@
   margin: em(8px, 16px) 0 0;
 
   @include media('<tablet') {
+    font-size: em(14px, 16px);
     line-height: 1.5;
   }
 

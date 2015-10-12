@@ -9,6 +9,11 @@
 .title-box {
   margin: 0 0 em(30px);
 
+  @include media('<1024px') {
+    border-top: 1px solid $white;
+    background: $offset-main-blue;
+  }
+
   h1 {
     color: $white;
 
