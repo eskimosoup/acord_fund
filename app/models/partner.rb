@@ -3,6 +3,7 @@ class Partner < ActiveRecord::Base
 
   validates :name, :image, presence: true
 
-  scope :displayed, -> { where(display: true) }
-  scope :positioned, -> { displayed.order(:position) }
+  scope :footer, -> { where(display_in_footer: true) }
+  scope :partners_page, -> { where(display_on_partners_page: true) }
+  scope :positioned, -> { order(:position) }
 end

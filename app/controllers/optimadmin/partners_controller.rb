@@ -48,7 +48,7 @@ module Optimadmin
     end
 
     def partner_params
-      params.require(:partner).permit(:position, :name, :image, :image_cache, :remove_image, :remote_image_url, :content, :website, :display)
+      params.require(:partner).permit(:position, :name, :image, :image_cache, :remove_image, :remote_image_url, :content, :website, :display_in_footer, :display_on_partners_page)
     end
   end
 end

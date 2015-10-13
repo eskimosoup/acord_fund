@@ -2,14 +2,30 @@
   <%= render 'shared/title_area', title: @presented_page.title %>
 
   <div class="row">
-    <div class="medium-8 <%= 'medium-centered' if (@presented_page.file_download.blank? || @presented_page.show_image.blank?) %> columns">
+    <div class="medium-9 <%= 'medium-centered' if (@presented_page.file_download.blank? && @presented_page.show_image.blank?) %> columns">
       <div class="content-box">
         <%= @presented_page.content %>
       </div>
+
+      <% if @presented_page.file_download.present? %>
+        <div class="aside-content-box download-box">
+          <%= link_to @presented_page.file.url do %>
+            <div class="row">
+              <div class="medium-10 columns">
+                <%= @presented_page.file_download_text %>
+              </div>
+
+              <div class="medium-2 columns">
+                <%= image_tag 'components/internal/download-icon.png', class: 'download-icon', alt: @presented_page.file_download_text %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
     </div>
 
     <% if @presented_page.file_download.present? || @presented_page.show_image.present? %>
-      <div class="medium-4 columns">
+      <div class="medium-3 columns">
         <% if @presented_page.file_download.present? %>
           <div class="aside-content-box download-box">
             <%= @presented_page.file_download %>

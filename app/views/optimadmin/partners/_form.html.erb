@@ -47,8 +47,12 @@
 
     <%= field_set_tag nil, id: 'tabs-3' do %>
             <div class="field">
-        <%= f.label :display %><br>
-        <%= f.check_box :display %>
+        <%= f.label :display_in_footer %><br>
+        <%= f.check_box :display_in_footer %>
+      </div>
+            <div class="field">
+        <%= f.label :display_on_partners_page %><br>
+        <%= f.check_box :display_on_partners_page %>
       </div>
           <% end %>
   </div>
