@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
   private
 
     def load_objects
-      @presented_partners = BaseCollectionPresenter.new(collection: Partner.positioned, view_template: view_context, presenter: PartnerPresenter)
+      @presented_partners = BaseCollectionPresenter.new(collection: Partner.footer.positioned, view_template: view_context, presenter: PartnerPresenter)
       @header_menu = Optimadmin::Menu.new(name: "header")
       @contact = Contact.new
     end

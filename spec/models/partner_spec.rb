@@ -9,10 +9,10 @@ RSpec.describe Partner, type: :model do
 
   describe "scopes", :scope do
     let(:partner) { create(:partner) }
-    let(:hidden_partner) { create(:partner, display: false) }
+    let(:hidden_partner) { create(:partner, display_in_footer: false) }
 
     it 'only returns displayed' do
-      expect(Partner.displayed).not_to include hidden_partner
+      expect(Partner.footer).not_to include hidden_partner
     end
   end
 end
