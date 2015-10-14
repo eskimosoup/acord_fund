@@ -1,7 +1,7 @@
 module ApplicationHelper
   def two_tone_title(title)
     return if title.blank?
-    size = title.scan(/[\w-]+/).size
+    size = title.split(' ').size
 
     if size > 1
       length = size - 1
@@ -14,7 +14,7 @@ module ApplicationHelper
   end
 
   def two_tone_comma_separated_title(title)
-    size = title.scan(/[\w-]+/).size
+    size = title.split(' ').size
 
     if size > 1
       length = size - 1
