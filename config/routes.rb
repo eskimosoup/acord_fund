@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   mount Optimadmin::Engine => "/admin"
   root to: 'application#index'
+
+  match "*path", to: "errors#show", via: :all, code: 404 unless Rails.application.config.consider_all_requests_local
 end
 
 Optimadmin::Engine.routes.draw do

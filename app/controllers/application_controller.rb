@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
 
-  rescue_from ActiveRecord::RecordNotFound do |exception|
-    render_error 404
-  end
+  rescue_from Exception, with: -> { render_error(404) }
+  rescue_from ActiveRecord::RecordNotFound, with: -> { render_error(404) }
+  rescue_from ActionController::RoutingError, with: -> { render_error(404) }
 
   def render_error(status)
     respond_to do |format|
