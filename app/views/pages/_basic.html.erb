@@ -1,8 +1,7 @@
 <div class="internal-content">
   <%= render 'shared/title_area', title: @presented_page.title %>
-
   <div class="row">
-    <div class="medium-9 <%= 'medium-centered' if (@presented_page.file_download.blank? && @presented_page.show_image.blank?) %> columns">
+    <div class="medium-9 <%= 'medium-centered' if (@presented_page.file_download.blank? && @presented_page.show_image.blank? && (@side_menus.blank? || (!@side_menus.last.has_children?(@page) && @side_menus.last.root_menu_item?(@page)))) %> columns">
       <div class="content-box">
         <%= @presented_page.content %>
       </div>
@@ -24,8 +23,16 @@
       <% end %>
     </div>
 
-    <% if @presented_page.file_download.present? || @presented_page.show_image.present? %>
+
+    <% if @presented_page.file_download.present? || @presented_page.show_image.present? || @side_menus.present? %>
       <div class="medium-3 columns">
+        <div class="aside-navigation">
+          <ul class="aside-navigation-links">
+            <%= nested_menu_items(menu_items: @side_menus.last.child_menu_items(@page)) if @side_menus.present? && @side_menus.last.has_children?(@page)  %>
+            <%= nested_menu_items(menu_items: @side_menus.last.sibling_menu_items(@page)) unless @side_menus.last.has_children?(@page) || @side_menus.last.root_menu_item?(@page) %>
+          </ul>
+        </div>
+
         <% if @presented_page.file_download.present? %>
           <div class="aside-content-box download-box">
             <%= @presented_page.file_download %>
