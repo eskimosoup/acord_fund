@@ -22,7 +22,7 @@ class ContactsController < ApplicationController
     end
 
     def load_contact_content
-      @presented_contact_sections = BaseCollectionPresenter.new(collection: AdditionalContent.displayed.where("area LIKE ?", "contact_us_%").where.not(area: 'contact_us_other_contact_details').order(area: :desc), view_template: view_context, presenter: AdditionalContentPresenter)
-      @presented_other_contact_details = AdditionalContentPresenter.new(object: AdditionalContent.displayed.find_by(area: 'contact_us_other_contact_details'), view_template: view_context)
+      @presented_contact_sections = BaseCollectionPresenter.new(collection: AdditionalContent.displayed.where("area LIKE ?", "contact_us_%").where.not(area: 'contact_us_0_general_enquiries').order(area: :desc), view_template: view_context, presenter: AdditionalContentPresenter)
+      @presented_other_contact_details = AdditionalContentPresenter.new(object: AdditionalContent.displayed.find_by(area: 'contact_us_0_general_enquiries'), view_template: view_context)
     end
 end
