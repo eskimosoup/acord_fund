@@ -10,6 +10,7 @@ class PagesController < ApplicationController
 
     def set_page
       @page = Page.displayed.friendly.find(params[:id])
+      @side_menus = @page.side_menus
       @presented_page = PagePresenter.new(object: @page, view_template: view_context)
     end
 end

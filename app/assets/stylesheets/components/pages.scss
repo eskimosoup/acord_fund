@@ -84,8 +84,16 @@
 
     @include media('>tablet') {
       min-height: 83px;
+      line-height: 1.25;
+    }
+
+    &.full {
       line-height: 53px;
     }
+  }
+
+  .download-icon {
+    margin-bottom: em(5px);
   }
 }
 
