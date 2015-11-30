@@ -2,7 +2,7 @@ class AdditionalContent < ActiveRecord::Base
   mount_uploader :image, AdditionalContentUploader
 
   validates :content, presence: true, if: "title.blank?"
-  validates :area, presence: true, uniqueness: true
+  #validates :area, presence: true, uniqueness: true
   validates :button_text, presence: true, if: "button_link.present?"
   validates :button_link, presence: true, if: "button_text.present?"
 

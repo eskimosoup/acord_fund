@@ -4,7 +4,7 @@ RSpec.describe AdditionalContent, type: :model do
   describe "validations", :validation do
     subject(:additional_content) { build(:additional_content) }
     it { should validate_presence_of(:content) }
-    it { should validate_uniqueness_of(:area) }
+    #it { should validate_uniqueness_of(:area) }
     it { should_not validate_presence_of(:button_text) }
     it { should_not validate_presence_of(:button_link) }
 
