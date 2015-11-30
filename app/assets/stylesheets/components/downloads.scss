@@ -14,3 +14,38 @@
     }
   }
 }
+
+.toggle-title {
+  background: $main-blue;
+  color: $white;
+  display: block;
+  padding: em(14px) em(32px) em(14px) em(14px);
+  margin: em(10px) 0 0;
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: $white;
+  }
+
+  &:hover {
+    background-color: $offset-main-blue;
+    text-decoration: none;
+  }
+}
+
+.toggle-title-content {
+  background: $main-blue;
+  border-top: 1px dotted $dark-blue;
+  color: $white;
+  padding: em(14px);
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active,
+  p {
+    color: $white;
+  }
+}

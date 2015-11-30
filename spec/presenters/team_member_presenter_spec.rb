@@ -8,4 +8,10 @@ RSpec.describe TeamMemberPresenter, type: :presenter do
     it { should delegate_method(:name).to(:team_member) }
     it { should delegate_method(:role).to(:team_member) }
   end
+
+  describe "standard team member" do
+    it "returns the biography - html formatted" do
+      expect(article_presenter.biography).to eq(raw team_member.biography)
+    end
+  end
 end
