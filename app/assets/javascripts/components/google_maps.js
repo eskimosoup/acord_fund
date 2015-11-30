@@ -22,3 +22,7 @@ function geocodeAddress(geocoder, resultsMap) {
     }
   });
 }
+
+$(document).on('click', '.map-canvas-cover', function() {
+  $(this).remove();
+});

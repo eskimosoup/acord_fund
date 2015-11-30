@@ -1,17 +1,25 @@
 <div class="internal-content">
-  <%= render 'shared/title_area', title: @presented_downloads_text.title %>
+  <%= render 'shared/title_area', title: 'Resources' %>
 
   <div class="row">
-    <div class="medium-12 columns">
+    <div class="medium-<%= @page.present? ? '6' : '12' %> columns">
       <div class="content-box">
+        <h2><%= @presented_downloads_text.title %></h2>
+
         <%= @presented_downloads_text.content %>
 
-        <div class="row">
-          <div class="medium-10 columns">
-            <%= render partial: 'download', collection: @presented_downloads, as: :download_presenter %>
-          </div>
-        </div>
+        <%= render partial: 'download', collection: @presented_downloads, as: :download_presenter %>
       </div>
     </div>
+
+    <% if @page.present? %>
+      <div class="medium-6 columns">
+        <div class="content-box">
+          <h2><%= @presented_page.title %></h2>
+          
+          <%= @presented_page.content %>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

@@ -1,8 +1,10 @@
-#map-canvas {
-  -webkit-box-shadow: 1px 2px 0px 0px rgba(213,213,213,1);
-  -moz-box-shadow: 1px 2px 0px 0px rgba(213,213,213,1);
-  box-shadow: 1px 2px 0px 0px rgba(213,213,213,1);
+.map-wrap {
   height: 406px;
+  position: relative;
+}
+
+%map-canvas-wrap {
+  height: 100%;
 
   @include media('>phone') {
     width: 100%;
@@ -12,4 +14,19 @@
     margin: 0 auto;
     width: 85%;
   }
+}
+
+.map-canvas-cover {
+  @extend  %map-canvas-wrap;
+  position: absolute;
+  z-index: 2;
+}
+
+#map-canvas {
+  @extend  %map-canvas-wrap;
+  -webkit-box-shadow: 1px 2px 0px 0px rgba(213,213,213,1);
+  -moz-box-shadow: 1px 2px 0px 0px rgba(213,213,213,1);
+  box-shadow: 1px 2px 0px 0px rgba(213,213,213,1);
+  position: absolute;
+  z-index: 1;
 }
