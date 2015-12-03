@@ -1,7 +1,7 @@
 <header class="top-header">
   <div class="logo">
     <%= link_to root_url, title: global_site_settings['Name'] do %>
-      <%= image_tag 'layout/header/logo.png', alt: global_site_settings['Name'] %>
+      <%= image_tag 'layout/header/logo.jpg', alt: global_site_settings['Name'] %>
     <% end %>
 
     <p class="tagline">&ldquo;Working in partnership with you to build a better business&rdquo;</p>
@@ -14,12 +14,21 @@
       <% end %>
     </div>
 
-    <strong class="advice-title">Need help or advice?</strong>
+    <div class="row">
+      <div class="medium-3 medium-offset-5 text-right hide-for-small columns">
+        <%= link_to (image_tag 'layout/header/chamber-logo.jpg', alt: 'Hull and Humber Chamber of Commerce'), 'http://www.hull-humber-chamber.co.uk/', target: '_blank', class: 'chamber-logo' %>
+      </div>
 
-    <p class="advice-details">
-      Call us on <strong><%= global_site_settings['Phone'] %> or</strong>
-      Email <%= mail_to global_site_settings['Email'] %>
-    </p>
+      <div class="medium-4 columns">
+        <strong class="advice-title">Need help or advice?</strong>
+
+        <p class="advice-details">
+          Call us on <strong><%= global_site_settings['Phone'] %> or</strong><br />
+          Email <%= mail_to global_site_settings['Email'] %>
+        </p>
+      </div>
+    </div>
+
   </div>
 </header>
 

@@ -78,11 +78,16 @@
   }
 }
 
+.chamber-logo {
+  display: block;
+  margin: em(11px) 0 0;
+}
+
 .advice-details {
   color: $light-blue;
   font-size: em(16px);
   font-weight: $lato-semibold;
-  line-height: 1;
+  line-height: 1.25;
   text-align: right;
   margin: em(8px, 16px) 0 0;
 
