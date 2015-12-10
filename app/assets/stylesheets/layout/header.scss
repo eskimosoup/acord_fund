@@ -35,10 +35,14 @@
 }
 
 @include media('>phone') {
-  .logo,
+  .logo {
+    float: left;
+    width: 60%;
+  }
+
   .contact-details {
     float: left;
-    width: 50%;
+    width: 40%;
   }
 }
 
@@ -50,12 +54,12 @@
 
   p {
     color: $dark-blue;
-    font-size: em(18px);
+    font-size: em(22px);
     font-weight: $lato-medium;
     line-height: 1;
 
     @include media('>phone') {
-      margin: 0 em(50px);
+      margin: 0 0 0 em(100px);
     }
 
     @include media('<tablet') {
@@ -100,5 +104,9 @@
   a {
     color: $dark-blue;
     font-weight: $lato-heavy;
+  }
+
+  .telephone {
+    font-size: em(24px, 16px);
   }
 }

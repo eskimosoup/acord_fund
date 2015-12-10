@@ -33,17 +33,17 @@
 
 .office-number {
   color: $offset-main-blue;
-  font-family: $montserrat;
+  //font-family: $montserrat;
   font-size: em(18px);
-  font-weight: $montserrat-light;
+  //font-weight: $montserrat-light;
   margin: em(18px, 18px) 0 0;
   text-transform: uppercase;
 
   strong {
     color: $black;
-    font-family: $merriweather;
+    //font-family: $merriweather;
     font-size: em(26px, 18px);
-    font-weight: $merriweather-bold;
+    //font-weight: $merriweather-bold;
 
     @include media('<tablet') {
       display: block;

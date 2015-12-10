@@ -51,7 +51,7 @@
 
 .home-hero-banner-links {
   list-style: none;
-  margin: em(108px) 0 0;
+  margin: em(59px) 0 0;
 
   @include media('<tablet') {
     margin: em(30px) 0 0;
@@ -86,7 +86,7 @@
   }
 
   a {
-    background: $dark-blue;
+    background: $main-blue;
     border: 1px solid $white;
     color: $white;
     display: block;
@@ -108,5 +108,24 @@
       color: $dark-blue;
       text-decoration: none;
     }
+  }
+}
+
+.loan-call-to-action {
+  color: $white;
+  display: block;
+  font-family: $montserrat;
+  font-size: em(23px);
+  margin: em(28px) 0 0;
+  text-align: center;
+
+  &:link,
+  &:visited {
+    color: $white;
+  }
+
+  strong {
+    color: $turquoise;
+    font-weight: $montserrat-bold;
   }
 }
