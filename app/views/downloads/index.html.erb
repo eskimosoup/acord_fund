@@ -1,3 +1,24 @@
+<%= content_for :head do %>
+  <script>
+  $(document).on('click', '.download a', function() {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Resource Download',
+      eventAction: 'click',
+      eventLabel: $(this).text()
+    });
+  });
+
+  $(document).on('click', '.toggle-title-content a', function() {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Resource Link',
+      eventAction: 'click',
+      eventLabel: $(this).text()
+    });
+  });
+  </script>
+<% end %>
 <div class="internal-content">
   <%= render 'shared/title_area', title: 'Resources' %>
 
@@ -16,7 +37,7 @@
       <div class="medium-6 columns">
         <div class="content-box">
           <h2><%= @presented_page.title %></h2>
-          
+
           <%= @presented_page.content %>
         </div>
       </div>
