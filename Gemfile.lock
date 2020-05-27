@@ -18,7 +18,7 @@ GIT
 PATH
   remote: ../optimadmin_generators
   specs:
-    optimadmin_generators (2.1.0)
+    optimadmin_generators (2.1.1)
       htmlbeautifier
       rubocop
 

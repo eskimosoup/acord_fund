@@ -2,7 +2,7 @@
 lock "~> 3.14.0"
 
 set :application, 'acorn_fund'
-set :client, 'client_name'
+set :client, 'chamber_of_commerce'
 set :deploy_via, :remote_cache
 set :default_stage, 'production'
 set :deploy_user, 'capistrano'
@@ -35,7 +35,7 @@ set :repo_url, "git@example.com:me/my_repo.git"
 append :linked_files, 'config/credentials.yml.enc', 'config/master.key'
 
 # Default value for linked_dirs is []
-append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'tmp/uploads', public/uploads', 'public/.well-known'
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'tmp/uploads', 'public/uploads', 'public/.well-known'
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
