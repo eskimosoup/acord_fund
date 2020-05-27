@@ -2,11 +2,11 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '4.2.8'
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.0.4'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -60,7 +60,8 @@ end
 group :development do
   gem 'quiet_assets', '~> 1.1.0'
   gem 'guard-rspec', '~> 4.6.4', require: false
-  gem 'optimadmin_generators', git: 'git@github.com:eskimosoup/optimadmin_generators.git'
+  # gem 'optimadmin_generators', git: 'git@github.com:eskimosoup/optimadmin_generators.git'
+  gem 'optimadmin_generators', path: '../optimadmin_generators'
   gem 'rack-mini-profiler', '~> 0.9.7'
   gem 'flamegraph', '~> 0.1.0'
   gem 'stackprof', '~> 0.2.7'

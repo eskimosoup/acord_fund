@@ -24,7 +24,7 @@ default: &default
 development:
   <<: *default
   database: acorn_fund_development
-  host: 192.168.0.41
+  host: localhost
   username: postgres
   password: tmedia
 
@@ -62,7 +62,7 @@ development:
 test:
   <<: *default
   database: acorn_fund_test
-  host: 192.168.0.41
+  host: localhost
   username: postgres
   password: tmedia
 
