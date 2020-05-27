@@ -1,13 +1,23 @@
 Rails.application.configure do
+  config.action_mailer.smtp_settings = { enable_starttls_auto: false }
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    address: 'mail.optimised.today',
+    authentication: :plain,
+    user_name: 'noreply@optimised.today',
+    password: ENV['NOREPLY_PASSWORD']
+  }
+
+  config.cache_store = :file_store, Rails.root.join('tmp', 'cache'), { expires_in: 6.hours }
   config.logger = Logger.new(config.paths['log'].first, 3, 5242880)
 
-  Rails.application.routes.default_url_options[:host] = 'www.ludo5.co.uk'
+  Rails.application.routes.default_url_options[:host] = 'www.chamberacornfund.com'
 
-  config.action_mailer.delivery_method = :sendmail
-  config.action_mailer.sendmail_settings = {
-    location: '/usr/lib/sendmail',
-    arguments: '-i'
-  }
+  # config.action_mailer.delivery_method = :sendmail
+  # config.action_mailer.sendmail_settings = {
+  #   location: '/usr/lib/sendmail',
+  #   arguments: '-i'
+  # }
 
   # Settings specified here will take precedence over those in config/application.rb.
 
